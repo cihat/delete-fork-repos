@@ -1,6 +1,9 @@
-# Delete Fork/Public Repositories
+# Delete/Make Private Repositories with GitHub API
+
+## Delete Fork-Public Repositories
 
 ```bash
+## Delete fork repos
 delete-fork-repos on  main [✘?] is 📦 1.0.0 via ⬢ v20.16.0
 ➜ npm run dev
 
@@ -115,4 +118,28 @@ Deleted: cihat/webext-vitesse
 Deleted: cihat/website-downloader-desktop
 Deleted: cihat/what-time
 Deleted: cihat/You-Dont-Know-JS
+```
+
+## Make Private Repositories with No Activity in a Year
+
+```bash
+## Make private public repos with no activity in a year(new Date(repo.updated_at) < oneYearAgo)
+delete-fork-repos on  main [!?] is 📦 1.0.0 via ⬢ v20.16.0 took 2,9s
+➜ d
+
+> delete-fork-repos@1.0.0 dev
+> node --env-file=.env index.js
+
+Found 130 repositories that haven't been updated in over a year.
+Made private: cihat/admin-tools
+Made private: cihat/AppointmentSystem
+Made private: cihat/assignment-todo-app
+Made private: cihat/barcode-detection
+Made private: cihat/basic-api
+Made private: cihat/basic-marketing-site
+Made private: cihat/basic-mern-project
+Made private: cihat/basic-music-app
+Made private: cihat/basicJavaScript
+Made private: cihat/become-fullstack-dev
+...
 ```
